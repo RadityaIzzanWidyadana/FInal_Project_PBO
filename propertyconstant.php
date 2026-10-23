@@ -6,6 +6,13 @@ class produk {
     public int $harga;
     public int $stok;
 
+    public function __construct($kode, $nama, $harga, $stok){
+        $this->kode = $kode;
+        $this->nama = $nama;
+        $this->harga = $harga;
+        $this->stok = $stok;
+    }
+
     public const PAJAK = 0.11;
 
     public function pajak(){
@@ -20,11 +27,11 @@ class produk {
 
 
 //object
-$produk = new produk();
-$produk->kode = 'A001';
-$produk->nama = 'Laptop';
-$produk->harga = 1000000;
-$produk->stok = 5;
+$produk = new produk('A001', 'Laptop', 1000000, 5);
+// $produk->kode = 'A001';
+// $produk->nama = 'Laptop';
+// $produk->harga = 1000000;
+// $produk->stok = 5;
 
 echo "Produk: ". $produk->nama;
 echo "<br/>";
