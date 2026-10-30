@@ -1,5 +1,7 @@
 <?php
 
+namespace Pbo\Marketplace;
+
 class produk {
     public string $kode;
     public string $nama;
@@ -24,25 +26,3 @@ class produk {
     }
 
 }
-
-
-//object
-$produk = new produk('A001', 'Laptop', 1000000, 5);
-// $produk->kode = 'A001';
-// $produk->nama = 'Laptop';
-// $produk->harga = 1000000;
-// $produk->stok = 5;
-
-echo "Produk: ". $produk->nama;
-echo "<br/>";
-
-echo "Harga: ". $produk->harga;
-echo "<br/>";
-
-echo "Stok: ". $produk->stok;
-echo "<br/>";
-
-echo "Pajak: ". $produk->pajak(). "%";
-echo "<br/>";
-
-echo "Total Harga: Rp". $produk->total();
